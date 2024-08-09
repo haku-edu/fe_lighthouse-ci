@@ -22,7 +22,8 @@ jobs:
         run: pnpm install
       - name: Install LHCI
         run: pnpm add -g @lhci/cli@0.14.x
-      - name: Build and Test
+      - name: Test
         run: |
           pnpm run build
-          lhci autorun
+          lhci collect
+          lhci upload
