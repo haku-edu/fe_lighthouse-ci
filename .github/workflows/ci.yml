@@ -27,3 +27,6 @@ jobs:
           pnpm run build
           lhci collect
           lhci upload
+        env:
+          env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
